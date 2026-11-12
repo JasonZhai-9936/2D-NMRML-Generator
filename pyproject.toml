@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nmrml-2d-generator"
+version = "0.1.0"
+description = "Generate 2D NMR nmrML files: predicted 1H-13C HSQC from assigned 1D spectra, or from a 2D COSY/HSQC dataset processed with nmrglue."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "scipy",
+    "nmrglue>=0.10",
+    "streamlit>=1.30",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+nmr2d = "nmr2d.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["network: downloads real HMDB test files from MolDB (skipped when offline)"]

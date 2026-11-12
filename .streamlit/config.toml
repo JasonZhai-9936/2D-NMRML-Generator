@@ -1,0 +1,17 @@
+# Colours follow JSpectraViewer (Bootstrap 5.3: bg-light page, primary blue buttons)
+[theme]
+base = "light"
+primaryColor = "#0d6efd"
+backgroundColor = "#f8f9fa"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#212529"
+font = "sans serif"
+
+[server]
+maxUploadSize = 500          # MB, the same limit as the JSpectraViewer website
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false

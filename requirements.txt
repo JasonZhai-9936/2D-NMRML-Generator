@@ -1,0 +1,5 @@
+# For Streamlit Community Cloud (streamlit_app.py adds src/ to the path)
+numpy
+scipy
+nmrglue>=0.10
+streamlit>=1.30
